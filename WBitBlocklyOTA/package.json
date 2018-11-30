@@ -1,0 +1,25 @@
+{
+  "name": "WBitBlockly",
+  "version": "1.0.0",
+  "description": "W.Bit 教育版",
+  "scripts": {
+    "start": ".\\nwjs\\nw.exe .",
+    "dev": ".\\nwjs-sdk\\nw.exe --remote-debugging-port=9222 ."
+  },
+  "dependencies": {
+    "websocket": "^1.0.28"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-auto-install": "^0.3.1",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-obfuscator": "^4.0.0",
+    "grunt-contrib-rename": "^0.2.0",
+    "grunt-curl": "^2.5.0",
+    "grunt-exec": "^3.0.0",
+    "grunt-zip": "^0.18.1",
+    "load-grunt-tasks": "^4.0.0"
+  },
+  "main": "main.js"
+}
