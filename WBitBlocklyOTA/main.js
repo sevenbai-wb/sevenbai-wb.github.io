@@ -5,7 +5,7 @@ let portId = null;
 let wsConnection = null;
 const APPNAME = appInfo.description;
 const VERSION = appInfo.version;
-const DEFAULT_URL = 'https://wbit.webduino.tw/blockly';
+const DEFAULT_URL = 'https://www.hinet.net';
 let titleMsg = '';
 let mainwin = null;
 
