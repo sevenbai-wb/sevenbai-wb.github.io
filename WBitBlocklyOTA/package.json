@@ -1,12 +1,13 @@
 {
   "name": "WBitBlockly",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "W.Bit 教育版",
   "scripts": {
     "start": ".\\nwjs\\nw.exe .",
     "dev": ".\\nwjs-sdk\\nw.exe --remote-debugging-port=9222 ."
   },
   "dependencies": {
+    "request": "^2.88.0",
     "websocket": "^1.0.28"
   },
   "devDependencies": {
@@ -21,5 +22,5 @@
     "grunt-zip": "^0.18.1",
     "load-grunt-tasks": "^4.0.0"
   },
-  "main": "main.js"
+  "main": "launcher.js"
 }
