@@ -217,6 +217,8 @@ let Camera = (function () {
   let vid = 0;
   let status;
   let labels = [];
+  let currentClass = -1;
+  let currentConfidence = 0;
 
   function loadJS(filePath) {
     var req = new XMLHttpRequest();
@@ -300,6 +302,13 @@ let Camera = (function () {
     labels[idx] = callback;
   }
 
+  proto.getClass = function() {
+    return currentClass;
+  }
+  proto.getConfidence = function() {
+    return currentConfidence;
+  }
+
   proto.startDetect = async function () {
     if (vid != 0) {
       const resultTensor = tf.tidy(() => {
@@ -312,16 +321,14 @@ let Camera = (function () {
       });
       let classTensor = resultTensor.argMax();
       let confidenceTensor = resultTensor.max();
-      let result = {
-        class: (await classTensor.data())[0],
-        confidence: (await confidenceTensor.data())[0]
-      }
+      currentClass = (await classTensor.data())[0];
+      currentConfidence = (await confidenceTensor.data())[0];
       classTensor.dispose();
       confidenceTensor.dispose();
       resultTensor.dispose();
-      status.innerHTML = "辨識類別編號為：" + result.class + ",信心水準：" + parseInt(result.confidence * 1000000) / 10000.0 + " %";
-      if (typeof labels[result.class] === "function") {
-        labels[result.class](result.class);
+      status.innerHTML = "辨識類別編號為：" + currentClass + ",信心水準：" + parseInt(currentConfidence * 1000000) / 10000.0 + " %";
+      if (typeof labels[currentClass] === "function") {
+        labels[currentClass](currentClass);
       }
     }
     setTimeout(async () => { await proto.startDetect() }, 100);

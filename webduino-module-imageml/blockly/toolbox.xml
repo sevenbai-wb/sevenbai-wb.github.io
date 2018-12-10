@@ -8,12 +8,11 @@
       </block>
     </value>
   </block>
-  <block type="imageml2_label">
+  <block type="imageml2_callback">
     <value name="name">
       <block type="demo_show_text">
         <value name="show_">
-          <block type="text">
-            <field name="TEXT">0</field>
+          <block type="imageml2_levelVal">
           </block>
         </value>
       </block>

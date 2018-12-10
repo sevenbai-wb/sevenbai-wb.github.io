@@ -13,7 +13,7 @@ Blockly.Blocks['imageml2_classifier'] = {
   }
 };
 
-Blockly.Blocks['imageml2_label'] = {
+Blockly.Blocks['imageml2_callback'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("imageClassifier"), "name")
@@ -28,5 +28,16 @@ Blockly.Blocks['imageml2_label'] = {
     this.setColour(75);
     this.setTooltip('https://mldemo.webduino.io');
     this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['imageml2_levelVal'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.WEBDUINO_IMAGEML_LEVEL);
+    this.setOutput(true, null);
+    this.setColour(45);
+ this.setTooltip("");
+ this.setHelpUrl("");
   }
 };
