@@ -306,7 +306,7 @@ let Camera = (function () {
     return currentClass;
   }
   proto.getConfidence = function() {
-    return currentConfidence;
+    return parseInt(currentConfidence * 1000000) / 10000.0;
   }
 
   proto.startDetect = async function () {

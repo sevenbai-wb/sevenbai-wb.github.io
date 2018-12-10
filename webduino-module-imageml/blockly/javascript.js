@@ -17,9 +17,13 @@ Blockly.JavaScript['imageml2_callback'] = function (block) {
 };
 
 Blockly.JavaScript['imageml2_levelVal'] = function (block) {
-  var idx = block.getFieldValue('idx');
   var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name'), Blockly.Variables.NAME_TYPE);
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'name');
   var code = variable_name + '.getClass()';
-  return code;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['imageml2_confidenceVal'] = function (block) {
+  var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name'), Blockly.Variables.NAME_TYPE);
+  var code = variable_name + '.getConfidence()';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };

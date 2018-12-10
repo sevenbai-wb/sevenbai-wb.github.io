@@ -1,4 +1,6 @@
 //https: //blockly-demo.appspot.com/static/demos/blockfactory_old/index.html#ckpupe
+const HOST_URL = "https://mldemo.webduino.io";
+
 Blockly.Blocks['imageml2_classifier'] = {
   init: function () {
     this.appendDummyInput()
@@ -8,8 +10,8 @@ Blockly.Blocks['imageml2_classifier'] = {
       .appendField(new Blockly.FieldTextInput(""), "modelName");
     this.setOutput(true, null);
     this.setColour(230);
-    this.setTooltip('https://mldemo.webduino.io');
-    this.setHelpUrl('');
+    this.setTooltip('');
+    this.setToolUrl(HOST_URL);
   }
 };
 
@@ -26,18 +28,31 @@ Blockly.Blocks['imageml2_callback'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(75);
-    this.setTooltip('https://mldemo.webduino.io');
-    this.setHelpUrl('');
+    this.setTooltip('');
+    this.setToolUrl(HOST_URL);
   }
 };
 
 Blockly.Blocks['imageml2_levelVal'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.WEBDUINO_IMAGEML_LEVEL);
+      .appendField(new Blockly.FieldVariable("imageClassifier"), "name")
+      .appendField(Blockly.Msg.WEBDUINO_IMAGEML_LEVEL);
     this.setOutput(true, null);
     this.setColour(45);
  this.setTooltip("");
- this.setHelpUrl("");
+ this.setToolUrl(HOST_URL);
+  }
+};
+
+Blockly.Blocks['imageml2_confidenceVal'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("imageClassifier"), "name")
+      .appendField(Blockly.Msg.WEBDUINO_IMAGEML_CONFIDENCE);
+    this.setOutput(true, null);
+    this.setColour(45);
+ this.setTooltip("");
+ this.setToolUrl(HOST_URL);
   }
 };
