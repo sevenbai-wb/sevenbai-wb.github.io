@@ -1,5 +1,5 @@
 {
-  "types": ["imageml_classifier", "imageml_label"],
+  "types": ["imageml2_classifier", "imageml2_label"],
   "category": "toolbox",
   "scripts": [
     "blockly/blocks.js",

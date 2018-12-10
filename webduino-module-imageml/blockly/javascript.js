@@ -6,7 +6,6 @@ Blockly.JavaScript['imageml2_classifier'] = function (block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-
 Blockly.JavaScript['imageml2_label'] = function (block) {
   var idx = block.getFieldValue('idx');
   var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name'), Blockly.Variables.NAME_TYPE);
