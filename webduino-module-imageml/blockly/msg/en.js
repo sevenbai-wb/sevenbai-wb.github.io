@@ -1,0 +1,1 @@
+MSG.catImageML = "image classifier";
