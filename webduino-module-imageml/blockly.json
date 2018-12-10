@@ -1,5 +1,5 @@
 {
-  "types": ["imageml2_classifier", "imageml2_callback"],
+  "types": ["imageml2_classifier", "imageml2_callback", "imageml2_levelVal"],
   "category": "toolbox",
   "scripts": [
     "blockly/blocks.js",
