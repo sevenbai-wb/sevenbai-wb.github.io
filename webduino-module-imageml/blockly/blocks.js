@@ -1,5 +1,5 @@
 //https: //blockly-demo.appspot.com/static/demos/blockfactory_old/index.html#ckpupe
-Blockly.Blocks['imageml_classifier'] = {
+Blockly.Blocks['imageml2_classifier'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_SRC)
@@ -13,7 +13,7 @@ Blockly.Blocks['imageml_classifier'] = {
   }
 };
 
-Blockly.Blocks['imageml_label'] = {
+Blockly.Blocks['imageml2_label'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("imageClassifier"), "name")

@@ -1,23 +1,14 @@
 <category id="catImageML">
-  <!--
-  <block type="variables_set">
-    <field name="VAR">camera</field>
-    <value name="VALUE">
-      <block type="imageml_camera">
-      </block>
-    </value>
-  </block>
-  -->
   <block type="variables_set">
     <field name="VAR">imageClassifier</field>
     <value name="VALUE">
-      <block type="imageml_classifier">
+      <block type="imageml2_classifier">
         <field name="camSource">本機</field>
         <field name="modelName">猜拳</field>
       </block>
     </value>
   </block>
-  <block type="imageml_label">
+  <block type="imageml2_label">
     <value name="name">
       <block type="demo_show_text">
         <value name="show_">
