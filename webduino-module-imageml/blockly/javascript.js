@@ -2,7 +2,7 @@ Blockly.JavaScript['imageml2_classifier'] = function (block) {
   var text_cameraurl = block.getFieldValue('cameraURL');
   var text_camSource = block.getFieldValue('camSource');
   var text_modelname = block.getFieldValue('modelName');
-  var code = 'getVideoClassifier("' + text_modelname + '","' + text_camSource + '")';
+  var code = 'getVideoClassifier("' + text_modelname + '","' + text_camSource + '",' + hasher.userId + ')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 

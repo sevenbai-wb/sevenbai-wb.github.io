@@ -211,7 +211,7 @@ let Camera = (function () {
   // let self = this;
   let proto;
   let Module = scope.Module;
-  const HOST_URL = 'https://mldemo.webduino.io';
+  const HOST_URL = "https://imageml2.webduino.io";
   let mobilenet;
   let secondmodel;
   let vid = 0;
@@ -231,17 +231,27 @@ let Camera = (function () {
     headElement.appendChild(newScriptElement);
   }
 
-  async function start(modelName, camSource) {
+  async function start(modelName, camSource, userId) {
     console.log("tfjs 0.13.4");
     //camSource = "http://192.168.0.168/jpg?0.5";
     // Module.call(this);
     loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.4');
     // load models
     try {
-      const _mobilenet = await tf.loadModel(HOST_URL + '/mobilenet/v1_0.25_224/model.json');
+      const idCode = ('00000000' + userId).slice(-8);
+      const apiHasher = new Hashids.default('X5lM3VPyBvm', 32, '0123456789abcdef');
+      const hashKey = apiHasher.encode([userId, Date.now()]);
+      const mobilenetUrl = HOST_URL + '/mobilenet/v1_0.25_224/model.json?hashkey=' + hashKey;
+      console.log(mobilenetUrl);
+
+      const _mobilenet = await tf.loadModel(mobilenetUrl);
       const layer = _mobilenet.getLayer('conv_pw_13_relu');
       mobilenet = tf.model({ inputs: _mobilenet.inputs, outputs: layer.output });
-      secondmodel = await tf.loadModel(HOST_URL + '/ml_models/' + modelName + '/model.json');
+
+      const secondModelUrl = HOST_URL + '/ml_models/' + idCode + modelName + '/model.json?hashkey=' + hashKey;
+      console.log(secondModelUrl);
+
+      secondmodel = await tf.loadModel(secondModelUrl);
     } catch (e) {
       alert('Load model error!');
     }
@@ -285,9 +295,9 @@ let Camera = (function () {
     await proto.startDetect();
   }
 
-  function imageml(modelName, camSource) {
+  function imageml(modelName, camSource, userId) {
     setTimeout(async () => {
-      await start(modelName, camSource);
+      await start(modelName, camSource, userId);
     }, 1);
   }
 

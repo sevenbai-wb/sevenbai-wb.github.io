@@ -1,5 +1,4 @@
 //https: //blockly-demo.appspot.com/static/demos/blockfactory_old/index.html#ckpupe
-const HOST_URL = "https://mldemo.webduino.io";
 
 Blockly.Blocks['imageml2_classifier'] = {
   init: function () {
@@ -11,7 +10,7 @@ Blockly.Blocks['imageml2_classifier'] = {
     this.setOutput(true, null);
     this.setColour(230);
     this.setTooltip('');
-    this.setToolUrl(HOST_URL);
+    this.setToolUrl(hasher.getUIUrl());
   }
 };
 
@@ -29,7 +28,7 @@ Blockly.Blocks['imageml2_callback'] = {
     this.setNextStatement(true, null);
     this.setColour(75);
     this.setTooltip('');
-    this.setToolUrl(HOST_URL);
+    this.setToolUrl(hasher.getUIUrl());
   }
 };
 
@@ -41,7 +40,7 @@ Blockly.Blocks['imageml2_levelVal'] = {
     this.setOutput(true, null);
     this.setColour(45);
  this.setTooltip("");
- this.setToolUrl(HOST_URL);
+ this.setToolUrl(hasher.getUIUrl());
   }
 };
 
@@ -53,6 +52,6 @@ Blockly.Blocks['imageml2_confidenceVal'] = {
     this.setOutput(true, null);
     this.setColour(45);
  this.setTooltip("");
- this.setToolUrl(HOST_URL);
+ this.setToolUrl(hasher.getUIUrl());
   }
 };

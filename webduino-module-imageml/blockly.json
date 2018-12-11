@@ -2,10 +2,13 @@
   "types": ["imageml2_classifier", "imageml2_callback", "imageml2_levelVal", "imageml2_confidenceVal"],
   "category": "toolbox",
   "scripts": [
+    "blockly/hashids.min.js",
+    "blockly/util.js",
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
+    "blockly/hashids.min.js",
     "imageml.js",
     "imageml-blockly.js"
   ],
