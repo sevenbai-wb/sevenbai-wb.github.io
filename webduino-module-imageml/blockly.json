@@ -8,7 +8,6 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "blockly/hashids.min.js",
     "imageml.js",
     "imageml-blockly.js"
   ],

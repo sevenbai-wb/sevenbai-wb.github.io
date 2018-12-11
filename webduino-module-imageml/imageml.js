@@ -238,20 +238,10 @@ let Camera = (function () {
     loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.4');
     // load models
     try {
-      const idCode = ('00000000' + userId).slice(-8);
-      const apiHasher = new Hashids.default('X5lM3VPyBvm', 32, '0123456789abcdef');
-      const hashKey = apiHasher.encode([userId, Date.now()]);
-      const mobilenetUrl = HOST_URL + '/mobilenet/v1_0.25_224/model.json?hashkey=' + hashKey;
-      console.log(mobilenetUrl);
-
-      const _mobilenet = await tf.loadModel(mobilenetUrl);
+      const _mobilenet = await tf.loadModel(HOST_URL + '/mobilenet/v1_0.25_224/model.json');
       const layer = _mobilenet.getLayer('conv_pw_13_relu');
       mobilenet = tf.model({ inputs: _mobilenet.inputs, outputs: layer.output });
-
-      const secondModelUrl = HOST_URL + '/ml_models/' + idCode + modelName + '/model.json?hashkey=' + hashKey;
-      console.log(secondModelUrl);
-
-      secondmodel = await tf.loadModel(secondModelUrl);
+      secondmodel = await tf.loadModel(HOST_URL + '/ml_models/' + ('00000000' + userId).slice(-8) + modelName + '/model.json');
     } catch (e) {
       alert('Load model error!');
     }
