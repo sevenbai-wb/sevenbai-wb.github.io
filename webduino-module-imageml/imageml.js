@@ -241,7 +241,13 @@ let Camera = (function () {
       const _mobilenet = await tf.loadModel(HOST_URL + '/mobilenet/v1_0.25_224/model.json');
       const layer = _mobilenet.getLayer('conv_pw_13_relu');
       mobilenet = tf.model({ inputs: _mobilenet.inputs, outputs: layer.output });
-      secondmodel = await tf.loadModel(HOST_URL + '/ml_models/' + ('00000000' + userId).slice(-8) + modelName + '/model.json');
+      if (modelName.indexOf('https://') === 0) {
+        // modelName is full url
+        secondmodel = await tf.loadModel(modelName);
+      } else {
+        // modelName is just name, combine full url by userId
+        secondmodel = await tf.loadModel(HOST_URL + '/ml_models/' + ('00000000' + userId).slice(-8) + modelName + '/model.json');
+      }
     } catch (e) {
       alert('Load model error!');
     }
