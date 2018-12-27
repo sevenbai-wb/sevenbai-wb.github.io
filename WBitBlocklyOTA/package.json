@@ -1,7 +1,7 @@
 {
   "name": "WBitBlockly",
   "version": "1.0.0",
-  "description": "W.Bit 教育版",
+  "description": "WebBit 教育版",
   "scripts": {
     "start": ".\\nwjs\\nw.exe .",
     "dev": ".\\nwjs-sdk\\nw.exe --remote-debugging-port=9222 ."
