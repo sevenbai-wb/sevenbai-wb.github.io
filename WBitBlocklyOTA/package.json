@@ -1,6 +1,6 @@
 {
   "name": "WBitBlockly",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web:Bit 教育版",
   "scripts": {
     "start": ".\\nwjs\\nw.exe .",
