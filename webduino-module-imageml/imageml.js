@@ -109,7 +109,9 @@ let Camera = (function () {
           if (typeof callback == 'function') {
             callback(image);
           }
-          image.src = self.URL + "?" + Math.random();
+          try {
+            image.src = self.URL + "?" + Math.random();
+          } catch (error) {}
         }, camSnapshotDelay);
       }
     }
