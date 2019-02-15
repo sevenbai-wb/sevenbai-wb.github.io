@@ -102,18 +102,19 @@ let Camera = (function () {
         camSnapshotDelay = parseFloat(this.URL.substring(param + 1)) * 1000;
         this.URL = this.URL.substring(0, param);
       }
-      image.src = this.URL;
+      image.addEventListener('error', function(e) {
+        image.src = self.URL + "?" + Math.random();
+      }, true);
       image.onload = function () {
         //self.drawRotated(canvas, image, 90);
         setTimeout(function () {
           if (typeof callback == 'function') {
             callback(image);
           }
-          try {
-            image.src = self.URL + "?" + Math.random();
-          } catch (error) {}
+          image.src = self.URL + "?" + Math.random();
         }, camSnapshotDelay);
       }
+      image.src = self.URL + "?" + Math.random();
     }
 
     onCanvas(eleOrId, callback) {
