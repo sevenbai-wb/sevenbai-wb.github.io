@@ -112,7 +112,7 @@ let Camera = (function () {
             callback(image);
           }
           image.src = self.URL + "?" + Math.random();
-        }, 500);
+        }, camSnapshotDelay);
       }
       image.src = self.URL + "?" + Math.random();
     }
