@@ -1,12 +1,13 @@
 {
-  "name": "WBitBlockly",
-  "version": "1.0.4",
-  "description": "Web:Bit 教育版",
+  "name": "wbitblockly",
+  "version": "1.0.5",
+  "description": "Web:Bit",
   "scripts": {
     "start": ".\\nwjs\\nw.exe .",
     "dev": ".\\nwjs-sdk\\nw.exe --remote-debugging-port=9222 ."
   },
   "dependencies": {
+    "express": "^4.16.4",
     "request": "^2.88.0",
     "websocket": "^1.0.28"
   },
