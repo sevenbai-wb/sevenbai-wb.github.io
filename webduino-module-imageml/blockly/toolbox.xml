@@ -4,7 +4,7 @@
     <value name="VALUE">
       <block type="imageml2_classifier">
         <field name="camSource">本機</field>
-        <field name="modelName">猜拳</field>
+        <field name="modelName">https://imageml2.webduino.io/ml_models/00009090卡片/model.json</field>
       </block>
     </value>
   </block>
