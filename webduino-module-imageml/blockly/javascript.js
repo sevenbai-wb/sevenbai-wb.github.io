@@ -1,8 +1,9 @@
 Blockly.JavaScript['imageml2_classifier'] = function (block) {
   var text_cameraurl = block.getFieldValue('cameraURL');
   var text_camSource = block.getFieldValue('camSource');
+  var checkbox_rotate = block.getFieldValue('rotate') == 'TRUE';
   var text_modelname = block.getFieldValue('modelName');
-  var code = 'getVideoClassifier("' + text_modelname + '","' + text_camSource + '",' + hasher.userId + ')';
+  var code = 'getVideoClassifier("' + text_modelname + '","' + text_camSource + '",' + checkbox_rotate + ',' + hasher.userId + ')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
