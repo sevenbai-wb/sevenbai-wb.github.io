@@ -5,6 +5,8 @@ Blockly.Blocks['imageml2_classifier'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_SRC)
       .appendField(new Blockly.FieldTextInput(Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_LOCAL), "camSource")
+      .appendField(Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_ROTATE)
+      .appendField(new Blockly.FieldCheckbox("FALSE"), "rotate")
       .appendField(Blockly.Msg.WEBDUINO_IMAGEML_MODEL_NAME)
       .appendField(new Blockly.FieldTextInput(""), "modelName");
     this.setOutput(true, null);
