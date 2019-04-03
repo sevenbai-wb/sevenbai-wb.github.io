@@ -1,4 +1,5 @@
 Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_SRC = "Camera Source:";
+Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_ROTATE = "Camera Rotate:";
 Blockly.Msg.WEBDUINO_IMAGEML_CAMERA_LOCAL = "Local";
 Blockly.Msg.WEBDUINO_IMAGEML_MODEL_NAME = ", load model:";
 Blockly.Msg.WEBDUINO_IMAGEML_CLASSIFY = "Start to classify, when the class index is";
