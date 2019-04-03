@@ -1,6 +1,6 @@
 {
   "name": "wbitblockly",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Web:Bit",
   "scripts": {
     "start": ".\\nwjs\\nw.exe .",
