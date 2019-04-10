@@ -28,3 +28,9 @@ Blockly.JavaScript['imageml2_confidenceVal'] = function (block) {
   var code = variable_name + '.getConfidence()';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['imageml2_classNameVal'] = function (block) {
+  var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('name'), Blockly.Variables.NAME_TYPE);
+  var code = variable_name + '.getClassName()';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};

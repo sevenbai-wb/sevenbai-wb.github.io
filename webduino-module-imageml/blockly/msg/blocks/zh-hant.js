@@ -7,3 +7,4 @@ Blockly.Msg.WEBDUINO_IMAGEML_CLASSIFY2 = "時";
 Blockly.Msg.WEBDUINO_IMAGEML_RUN = "執行";
 Blockly.Msg.WEBDUINO_IMAGEML_LEVEL = "分類編號";
 Blockly.Msg.WEBDUINO_IMAGEML_CONFIDENCE = "分類信心度";
+Blockly.Msg.WEBDUINO_IMAGEML_CLASSNAME = "分類名稱";

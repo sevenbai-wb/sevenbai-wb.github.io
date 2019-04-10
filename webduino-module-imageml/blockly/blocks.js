@@ -57,3 +57,15 @@ Blockly.Blocks['imageml2_confidenceVal'] = {
  this.setToolUrl(hasher.getUIUrl());
   }
 };
+
+Blockly.Blocks['imageml2_classNameVal'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("imageClassifier"), "name")
+      .appendField(Blockly.Msg.WEBDUINO_IMAGEML_CLASSNAME);
+    this.setOutput(true, null);
+    this.setColour(45);
+ this.setTooltip("");
+ this.setToolUrl(hasher.getUIUrl());
+  }
+};

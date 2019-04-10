@@ -14,7 +14,7 @@ class Hasher {
     }
     getAPIHash() {
         const apiHasher = new Hashids.default('X5lM3VPyBvm', 32, '0123456789abcdef');
-        return apiHasher.encode([this.userId], Date.now());
+        return apiHasher.encode([this.userId, Date.now()]);
     }
 }
 var hasher = new Hasher();
