@@ -422,7 +422,7 @@ let Camera = (function () {
     return parseInt(currentConfidence * 1000000) / 10000.0;
   }
   proto.getClassName = function () {
-    return (currentClass >= 0) ? modelInfo.classes[currentClass].name : '';
+    return (modelInfo.classes && currentClass >= 0) ? modelInfo.classes[currentClass].name : '';
   }
 
   proto.startDetect = async function () {
