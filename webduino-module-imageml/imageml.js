@@ -443,7 +443,7 @@ let Camera = (function () {
       confidenceTensor.dispose();
       resultTensor.dispose();
       status.innerHTML = "辨識類別編號為：" + currentClass + 
-      "<br>類別名稱為：" + modelInfo.classes[currentClass].name +
+      "<br>類別名稱為：" + (modelInfo.classes ? modelInfo.classes[currentClass].name : "") +
       "<br>信心水準：" + parseInt(currentConfidence * 1000000) / 10000.0 + " %";
       if (typeof labels[currentClass] === "function") {
         labels[currentClass](currentClass);
