@@ -92,7 +92,8 @@
             width: 224,
             height: 224,
             facingMode: "user"
-          }
+          },
+          audio: false
         })
         .then(stream => {
           vid.srcObject = stream;
