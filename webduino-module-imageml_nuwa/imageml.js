@@ -84,6 +84,7 @@
     vid.width = 224;
     vid.height = 224;
     vid.autoplay = true;
+    vid.muted = true;
     document.body.appendChild(vid);
     // start webcam
     try {
