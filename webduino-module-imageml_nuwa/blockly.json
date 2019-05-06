@@ -1,0 +1,19 @@
+{
+  "types": ["imageml_nuwa_classifier", "imageml_nuwa_callback", "imageml_nuwa_levelVal", "imageml_nuwa_confidenceVal", "imageml_nuwa_classNameVal"],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/hashids.min.js",
+    "blockly/util.js",
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "blockly/hashids.min.js",
+    "blockly/util.js",
+    "imageml.js",
+    "imageml-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

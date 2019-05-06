@@ -1,0 +1,26 @@
+<category id="catImageML">
+  <block type="variables_set">
+    <field name="VAR">imageClassifier</field>
+    <value name="VALUE">
+      <block type="imageml_nuwa_classifier">
+        <field name="modelName">/00009090卡片</field>
+      </block>
+    </value>
+  </block>
+  <block type="imageml_nuwa_callback">
+    <value name="name">
+      <block type="demo_show_text">
+        <value name="show_">
+          <block type="imageml_nuwa_classNameVal">
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="imageml_nuwa_levelVal">
+  </block>
+  <block type="imageml_nuwa_classNameVal">
+  </block>
+  <block type="imageml_nuwa_confidenceVal">
+  </block>
+</category>
