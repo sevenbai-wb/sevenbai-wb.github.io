@@ -71,7 +71,7 @@
           }
         }
       });
-      req.open("GET", HOST_URL + '/mlapi/models?hashkey=' + '482a3e7b4e248f5d8d359ed676b95d64' /*hasher.getAPIHash()*/);
+      req.open("GET", HOST_URL + '/mlapi/models?hashkey=' + hasher.getAPIHash());
       req.send();
 
       // load model
