@@ -163,7 +163,7 @@
         labels[currentClass](currentClass);
       }
     }
-    setTimeout(async () => { await proto.startDetect() }, 100);
+    setTimeout(async () => { await proto.startDetect() }, 1000);
   }
 
   scope.module.imageml = imageml;
