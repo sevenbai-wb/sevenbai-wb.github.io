@@ -4,7 +4,7 @@ class Hasher {
   constructor() {
     const strCookie = document.cookie;
     const idx = strCookie.indexOf(" userId=");
-    this.userId = ((idx === -1) ? -1 : parseInt(strCookie.slice(idx+8)));
+    this.userId = ((idx === -1) ? 9090 : parseInt(strCookie.slice(idx+8)));
     this.idCode = ('00000000' + this.userId).slice(-8);
     }
 
