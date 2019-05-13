@@ -32,10 +32,8 @@
   }
 
   async function start(modelName) {
-    console.log("tfjs 1.1.2");
-    loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2');
-tf.setBackend('webgl');
-console.log(tf.getBackend());
+    console.log("tfjs 0.13.4");
+    loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.4');
     // load models
     try {
       const _mobilenet = await tf.loadModel(HOST_URL + '/mobilenet/v1_0.25_224/model.json');
