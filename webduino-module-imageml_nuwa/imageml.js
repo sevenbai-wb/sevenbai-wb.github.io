@@ -32,7 +32,7 @@
   }
 
   async function start(modelName) {
-    console.log("tfjs 0.13.4");
+    console.log("tfjs 1.1.2");
     loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2');
     // load models
     try {
