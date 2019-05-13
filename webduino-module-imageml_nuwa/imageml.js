@@ -139,7 +139,7 @@
     return (modelInfo.classes && currentClass >= 0) ? modelInfo.classes[currentClass].name : '';
   }
 
-  proto.startDetect = async function () {
+  proto.startDetect = function () {
     if (vid != 0) {
       const resultTensor = tf.tidy(() => {
         const webcamImage = tf.fromPixels(vid);
@@ -151,8 +151,8 @@
       });
       let classTensor = resultTensor.argMax();
       let confidenceTensor = resultTensor.max();
-      currentClass = (await classTensor.data())[0];
-      currentConfidence = (await confidenceTensor.data())[0];
+      currentClass = classTensor.dataSync()[0];
+      currentConfidence = confidenceTensor.dataSync()[0];
       classTensor.dispose();
       confidenceTensor.dispose();
       resultTensor.dispose();
@@ -163,7 +163,7 @@
         labels[currentClass](currentClass);
       }
     }
-    setTimeout(async () => { await proto.startDetect() }, 1000);
+    setTimeout(() => { proto.startDetect() }, 1000);
   }
 
   scope.module.imageml = imageml;
