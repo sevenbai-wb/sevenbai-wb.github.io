@@ -32,8 +32,8 @@
   }
 
   async function start(modelName) {
-    console.log("tfjs 0.15.3");
-    loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.3');
+    console.log("tfjs 1.1.2");
+    loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2');
 tf.setBackend('webgl');
 console.log(tf.getBackend());
     // load models
