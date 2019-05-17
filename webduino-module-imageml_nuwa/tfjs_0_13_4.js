@@ -5270,8 +5270,8 @@
             this.vertexAttrsAreBound = !1,
             this.itemsToPoll = [],
             this.gl = null != e ? e : getWebGLContext(ENV.get("WEBGL_VERSION")),
-            1 === ENV.get("WEBGL_VERSION") ? (this.textureFloatExtension = getExtensionOrThrow(this.gl, "OES_texture_half_float"),
-            this.colorBufferFloatExtension = this.gl.getExtension("WEBGL_color_buffer_float"),
+            1 === ENV.get("WEBGL_VERSION") ? (/*this.textureFloatExtension = getExtensionOrThrow(this.gl, "OES_texture_float"),
+            this.colorBufferFloatExtension = this.gl.getExtension("WEBGL_color_buffer_float"),*/
             ENV.get("WEBGL_RENDER_FLOAT32_ENABLED") || (this.textureHalfFloatExtension = getExtensionOrThrow(this.gl, "OES_texture_half_float"),
             this.colorBufferHalfFloatExtension = this.gl.getExtension("EXT_color_buffer_half_float"))) : this.colorBufferFloatExtension = getExtensionOrThrow(this.gl, "EXT_color_buffer_float"),
             this.vertexBuffer = createVertexBuffer(this.gl),
