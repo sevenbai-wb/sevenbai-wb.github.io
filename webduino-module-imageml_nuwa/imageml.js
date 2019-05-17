@@ -10,7 +10,7 @@
   // let self = this;
   let proto;
   let Module = scope.Module;
-  const HOST_URL = "https://imageml2.webduino.io";
+  // const HOST_URL = "https://imageml2.webduino.io";
   let mobilenet;
   let secondmodel;
   let vid = 0;
@@ -20,20 +20,20 @@
   let currentConfidence = 0;
   let modelInfo = {};
 
-  function loadJS(filePath) {
-    var req = new XMLHttpRequest();
-    req.open("GET", filePath, false); // 'false': synchronous.
-    req.send(null);
-    var headElement = document.getElementsByTagName("head")[0];
-    var newScriptElement = document.createElement("script");
-    newScriptElement.type = "text/javascript";
-    newScriptElement.text = req.responseText;
-    headElement.appendChild(newScriptElement);
-  }
+  // function loadJS(filePath) {
+  //   var req = new XMLHttpRequest();
+  //   req.open("GET", filePath, false); // 'false': synchronous.
+  //   req.send(null);
+  //   var headElement = document.getElementsByTagName("head")[0];
+  //   var newScriptElement = document.createElement("script");
+  //   newScriptElement.type = "text/javascript";
+  //   newScriptElement.text = req.responseText;
+  //   headElement.appendChild(newScriptElement);
+  // }
 
   async function start(modelName) {
-    console.log("tfjs 0.13.4");
-    loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.4');
+    // console.log("tfjs 0.13.4");
+    // loadJS('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.4');
     // load models
     try {
       const _mobilenet = await tf.loadModel(HOST_URL + '/mobilenet/v1_0.25_224/model.json');
