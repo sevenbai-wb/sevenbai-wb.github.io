@@ -10,6 +10,7 @@
   "dependencies": [
     "blockly/hashids.min.js",
     "blockly/util.js",
+    "tfjs_0_13_4.js",
     "imageml.js",
     "imageml-blockly.js"
   ],
