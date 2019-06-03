@@ -9,6 +9,8 @@
   ],
   "dependencies": [
     "blockly/hashids.min.js",
+    "adapter.js",
+    "webRTC.js",
     "blockly/util.js",
     "imageml.js",
     "imageml-blockly.js"
